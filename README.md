@@ -38,8 +38,8 @@ So **DO NOT SHARE YOUR LOGIN EMAIL ADDRESS WITH ANYONE!**
    Not added currently because there aren't any available on the portal & therefore I cannot parse the HTML.
 3. **Background schedule & notices check**\
    This can be easily achieved on Android via **AlarmManager** or **WorkManager**
-    but iOS has complete different strategy which does not guarantee background task execution.
-    (The non flutter Android version hosted on https://weschool-mms.web.app already has this feature).
+   but iOS has complete different strategy which does not guarantee background task execution.\
+   (The non flutter Android version hosted on https://weschool-mms.web.app already has this feature).
 4. **Add support for Bangalore Campus.**\
    The current implementation has **Mumbai** campus hardcoded,\
    coz I have no idea about the Bangalore campus.
