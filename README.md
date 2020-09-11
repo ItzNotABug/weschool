@@ -16,7 +16,7 @@ But then why handle 2 different codebase, so here we are.
 As the Portal does not have any known API on its end to retrieve data,
 therefore the app uses the same old HTML Parsing techniques & displays the formatted data.\
 This is done using a flutter plugin called **Requests** which saves **Sessions Cookies** when the user logs in
-& the same cookies are then used for all the https requests in the app.\
+& the same cookies are then used for all the https requests in the app.
 ##### The flaw
 The portal has a very vague **Password Reset** strategy.\
 No cross checks are implemented, there is no Email Authentication done and therefore anyone,\
