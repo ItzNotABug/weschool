@@ -4,7 +4,7 @@ import 'package:project_welingkar/constants/constants.dart';
 import 'package:requests/requests.dart';
 
 class Misc {
-  static Future<Document> getHtmlContent(String url) async {
+  static Future<Document> getContent(String url) async {
     var response = await Requests.get(url);
     var html = parse(response.content());
     return html;

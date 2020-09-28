@@ -129,7 +129,7 @@ class _ScheduleState extends State<Schedule> {
     String url = kScheduleUrl;
     if (date.trim().isNotEmpty) url = url + '?date=$date';
 
-    var html = await Misc.getHtmlContent(url);
+    var html = await Misc.getContent(url);
     var timetable = html.getElementsByClassName('col-xs-12')[0];
     timetable.children[0].children.removeAt(0);
     timetable.children[0].children.removeAt(0);

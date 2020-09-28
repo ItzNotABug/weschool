@@ -172,7 +172,7 @@ class _NoticesState extends State<Notices> {
   void fetchAttendance() async {
     setState(() => loading = true);
 
-    var html = await Misc.getHtmlContent(kNoticesUrl);
+    var html = await Misc.getContent(kNoticesUrl);
     var notices = html.getElementsByClassName('table table-striped')[0];
     List<NoticesModal> list = List();
     notices.getElementsByTagName('tr').asMap().forEach((index, element) {

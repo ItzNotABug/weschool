@@ -134,7 +134,7 @@ class _AttendanceReviewState extends State<AttendanceReview> {
   void fetchAttendance() async {
     setState(() => loading = true);
 
-    var html = await Misc.getHtmlContent(kAttendanceReviewUrl);
+    var html = await Misc.getContent(kAttendanceReviewUrl);
     var attReview = html.getElementsByClassName('table table-hover')[0];
 
     if (attReview != null &&

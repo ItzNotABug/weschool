@@ -7,7 +7,7 @@ import 'package:project_welingkar/components/border_rounded_button.dart';
 import 'package:project_welingkar/components/rounded_button.dart';
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/screens/dashboard/dashboard.dart';
-import 'package:project_welingkar/screens/webview/common_webview.dart';
+import 'package:project_welingkar/screens/webview/password_reset_webview.dart';
 import 'package:requests/requests.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -86,7 +86,7 @@ class _ReviewDetailsState extends State<ReviewDetails> {
 
   void fetchAttReview() async {
     String url = widget.url;
-    var html = await Misc.getHtmlContent(url);
+    var html = await Misc.getContent(url);
     var reviewDetails = html.getElementsByClassName('table table-hover')[0];
     reviewDetails.getElementsByTagName('tr').asMap().forEach((index, element) {
       element.children[0].remove();
