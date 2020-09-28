@@ -136,7 +136,7 @@ class _CoursePlanState extends State<CoursePlan> {
     setState(() => loading = true);
 
     List<CoursePlanModal> list = List();
-    var html = await Misc.getHtmlContent(kCoursePlanUrl);
+    var html = await Misc.getContent(kCoursePlanUrl);
     var coursePlan = html.getElementsByClassName('box box-primary')[0];
     var coursePlanTrList = coursePlan.getElementsByTagName('tr').asMap();
     coursePlanTrList.forEach((index, element) {
