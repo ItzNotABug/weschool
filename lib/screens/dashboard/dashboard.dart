@@ -1,5 +1,3 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_welingkar/components/about_info.dart';
 import 'package:project_welingkar/components/dashboard_menu_item.dart';
@@ -9,6 +7,7 @@ import 'package:project_welingkar/components/text_divider.dart';
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/screens/attendance/attendance.dart';
 import 'package:project_welingkar/screens/attendance/review.dart';
+import 'package:project_welingkar/screens/feed/feed_list.dart';
 import 'package:project_welingkar/screens/notices/notices.dart';
 import 'package:project_welingkar/screens/schedule/schedule.dart';
 import 'package:project_welingkar/screens/tlp/course_plan.dart';
@@ -159,6 +158,21 @@ class _DashboardState extends State<Dashboard> {
                 },
               ),
 
+              TextDivider(
+                title: "Welingkar Blogs",
+              ),
+
+              DashboardMenuItem(
+                name: 'Beyond the Walls',
+                isInfo: false,
+                onTap: () async {
+                  if (!(await isConnected()))
+                    showSnack('Offline');
+                  else
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => FeedList()));
+                },
+              ),
               // Case Central data (html) is not available yet.
               // TextDivider(
               //   title: 'Case Central',
