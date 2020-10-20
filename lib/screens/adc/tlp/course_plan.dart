@@ -6,7 +6,8 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:html/dom.dart' as dom;
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/misc/misc.dart';
-import 'package:project_welingkar/misc/pojos/course_plan_modal.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
+import 'package:project_welingkar/misc/models/course_plan_modal.dart';
 
 class CoursePlan extends StatefulWidget {
   @override
@@ -129,6 +130,7 @@ class _CoursePlanState extends State<CoursePlan> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

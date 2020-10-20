@@ -1,3 +1,4 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_welingkar/screens/login/splash.dart';
@@ -6,6 +7,7 @@ import 'constants/constants.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  Admob.initialize();
   runApp(WelingkarApp());
 }
 
@@ -16,6 +18,7 @@ class WelingkarApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Welingkar App',

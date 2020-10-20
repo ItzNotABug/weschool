@@ -10,7 +10,6 @@ class Misc {
     return html;
   }
 
-
   // for Schedule
   static String replaceScheduleFields(String html) {
     bool sameRemark = false;

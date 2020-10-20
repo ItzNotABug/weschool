@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:html/parser.dart' show parse;
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/misc/misc.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 import 'package:requests/requests.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -76,6 +77,7 @@ class _AttendanceState extends State<Attendance> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

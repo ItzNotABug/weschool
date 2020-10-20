@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 
 class ImageViewer extends StatelessWidget {
   final String src;
@@ -26,6 +27,7 @@ class ImageViewer extends StatelessWidget {
               imageProvider: NetworkImage(src),
             ),
           )),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 }

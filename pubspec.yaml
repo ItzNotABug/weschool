@@ -24,6 +24,7 @@ dependencies:
   flutter_custom_tabs: ^0.6.0
   webfeed: ^0.6.0
   photo_view: ^0.10.2
+  admob_flutter: ^1.0.0
 
 dev_dependencies:
   flutter_test:

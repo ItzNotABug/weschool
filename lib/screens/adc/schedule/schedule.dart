@@ -6,6 +6,7 @@ import 'package:flutter_rounded_date_picker/rounded_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/misc/misc.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:simple_connectivity/simple_connectivity.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -34,7 +35,7 @@ class _ScheduleState extends State<Schedule> {
   // kinda hackish though.
   @override
   void setState(fn) {
-    if(mounted) {
+    if (mounted) {
       super.setState(fn);
     }
   }
@@ -113,6 +114,7 @@ class _ScheduleState extends State<Schedule> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

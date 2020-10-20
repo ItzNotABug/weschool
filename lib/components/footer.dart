@@ -32,7 +32,7 @@ class Footer extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 64),
+        SizedBox(height: 32),
       ],
     );
   }

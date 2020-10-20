@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/misc/misc.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ReviewDetails extends StatefulWidget {
@@ -81,6 +82,7 @@ class _ReviewDetailsState extends State<ReviewDetails> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

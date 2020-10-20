@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_welingkar/constants/constants.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 /*
@@ -30,7 +31,7 @@ class _PassResetWebViewState extends State<PassResetWebView> {
   // kinda hackish though.
   @override
   void setState(fn) {
-    if(mounted) {
+    if (mounted) {
       super.setState(fn);
     }
   }
@@ -115,6 +116,7 @@ class _PassResetWebViewState extends State<PassResetWebView> {
           )
         ],
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 }

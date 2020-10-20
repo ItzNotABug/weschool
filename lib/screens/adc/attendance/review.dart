@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/misc/misc.dart';
-import 'package:project_welingkar/misc/pojos/att_review_modal.dart';
-import 'package:project_welingkar/screens/attendance/review_details.dart';
+import 'package:project_welingkar/misc/models/att_review_modal.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
+import 'package:project_welingkar/misc/navigator_compat.dart';
+import 'package:project_welingkar/screens/adc/attendance/review_details.dart';
 
 class AttendanceReview extends StatefulWidget {
   @override
@@ -22,7 +24,7 @@ class _AttendanceReviewState extends State<AttendanceReview> {
   // kinda hackish though.
   @override
   void setState(fn) {
-    if(mounted) {
+    if (mounted) {
       super.setState(fn);
     }
   }
@@ -67,14 +69,13 @@ class _AttendanceReviewState extends State<AttendanceReview> {
                             child: InkWell(
                               borderRadius: BorderRadius.circular(12),
                               onTap: () async {
-                                Navigator.push(
+                                NavigatorCompat.push(
                                     context,
-                                    MaterialPageRoute(
-                                        builder: (_) => ReviewDetails(
-                                              url:
-                                                  'https://elearn.welingkar.org/adc_new/${modal.link}',
-                                              title: 'Review',
-                                            )));
+                                    ReviewDetails(
+                                      url:
+                                          'https://elearn.welingkar.org/adc_new/${modal.link}',
+                                      title: 'Review',
+                                    ));
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(18.0),
@@ -115,6 +116,7 @@ class _AttendanceReviewState extends State<AttendanceReview> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

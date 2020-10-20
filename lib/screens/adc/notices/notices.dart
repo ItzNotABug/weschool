@@ -6,7 +6,8 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html/style.dart';
 import 'package:project_welingkar/constants/constants.dart';
 import 'package:project_welingkar/misc/misc.dart';
-import 'package:project_welingkar/misc/pojos/notices_modal.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
+import 'package:project_welingkar/misc/models/notices_modal.dart';
 
 /*
 TODO:
@@ -138,6 +139,7 @@ class _NoticesState extends State<Notices> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

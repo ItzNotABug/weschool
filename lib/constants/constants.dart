@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_html/style.dart';
 
@@ -21,6 +23,10 @@ const kTextFieldDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(12.0)),
   ),
 );
+
+final kBannerAdUnitId = Platform.isAndroid
+    ? "ca-app-pub-9259754086307165/9695667945"
+    : "ca-app-pub-9259754086307165/7697078611";
 
 // App Strings
 

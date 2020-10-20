@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:project_welingkar/constants/constants.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 import 'package:project_welingkar/screens/feed/feed_detail.dart';
 import 'package:requests/requests.dart';
 import 'package:webfeed/domain/rss_feed.dart';
@@ -71,7 +72,7 @@ class _FeedListState extends State<FeedList> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (_) => FeedDetail(
-                                            title: "Blog Post",
+                                            title: modal.title,
                                             html: modal.content.value,
                                           )));
                             },
@@ -122,6 +123,7 @@ class _FeedListState extends State<FeedList> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 

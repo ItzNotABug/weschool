@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:project_welingkar/constants/constants.dart';
+import 'package:project_welingkar/misc/models/banner_ad.dart';
 import 'package:project_welingkar/screens/feed/image_viewer.dart';
 
 class FeedDetail extends StatefulWidget {
@@ -40,7 +41,7 @@ class _FeedDetailState extends State<FeedDetail> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.title,
+          "Blog Post",
           style: TextStyle(color: kWeSchoolThemeColor),
         ),
       ),
@@ -56,17 +57,39 @@ class _FeedDetailState extends State<FeedDetail> {
                 child: Opacity(
                   opacity: loading ? 0 : 1,
                   child: SingleChildScrollView(
-                    child: Html(
-                      data: rssContent,
-                      style: {'body': kBodyStyle16},
-                      onImageTap: (src) {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (_) => ImageViewer(
-                                      src: src,
-                                    )));
-                      },
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 18, horizontal: 10),
+                          child: Text(widget.title,
+                              style: TextStyle(
+                                fontFamily: kSerif,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: kWeSchoolThemeColor,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Divider(
+                            thickness: 1.8,
+                            color: kWeSchoolThemeColor.withAlpha(150),
+                          ),
+                        ),
+                        Html(
+                          data: rssContent,
+                          style: {'body': kBodyStyle16},
+                          onImageTap: (src) {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => ImageViewer(
+                                          src: src,
+                                        )));
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -83,6 +106,7 @@ class _FeedDetailState extends State<FeedDetail> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBannerAd(),
     );
   }
 }
